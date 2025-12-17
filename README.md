@@ -21,10 +21,11 @@ Traditional Alzheimer’s diagnosis methods are expensive, time-consuming, and r
 - Reduce diagnostic delays and healthcare costs
 - Support clinicians with data-driven insights
 
+The solution proposed is to utilise an interactive test which is cost-effective screening compared to imaging tests and if a positive is found, the patient can be forwarded to specialists which in turn, is a scalable solution for hospitals and telemedicine platforms
 ---
 
-### 2️⃣ Data Understanding
-The dataset consists of structured clinical and demographic information collected from patient records.
+### 2️⃣ Data Understanding and Preparation
+The dataset consists of structured clinical and demographic information collected from patient records. It was sourced from Kaggle using the link "https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset"
 
 **Key Features:**
 - Demographic: `Age`, `Gender`, `EducationLevel`
@@ -32,29 +33,34 @@ The dataset consists of structured clinical and demographic information collecte
 - Behavioral: `MemoryComplaints`, `BehavioralProblems`
 - Target variable: `Diagnosis` (Alzheimer’s / Non-Alzheimer’s)
 
+**Data Preparation**
+- Removed irrelevant identifier columns
+- Handled missing values
+- Encoded categorical variables
+- Ensured correct target formatting
+
+
+---
+
+### 3️⃣ Explaratory Data Analysis
+
+Heatmap reveals that the features do not have any strong correlations among themselves. However, there are five columns that show a correlation with the target variable
+
 **Correlation Insights (Pearson’s Correlation):**
 - `MMSE`, `FunctionalAssessment`, and `ADL` are negatively correlated with `Diagnosis`
 - `MemoryComplaints` and `BehavioralProblems` are positively correlated with `Diagnosis`
 
 ---
 
-### 3️⃣ Data Preparation
-- Removed irrelevant identifier columns
-- Handled missing values
-- Encoded categorical variables
-- Ensured correct target formatting
-
----
-
 ### 4️⃣ Modeling
 **Models Evaluated:**
-- Logistic Regression
-- SVM
-- Random Forest
-- XGBoost
+- Logistic Regression:This model was chosen for its simpleness and interpretability and is also used in medical datasets
+- SVM: This model was chosen because its good for small datasets and effective with scaled features
+- Random Forest: This model was chosen due to its stability and because it handles non linear data well
+- XGBoost: This model was chosen because it is what is commonly used in smaller medical datasets since it handles mixed numerical and categorical data well
 
 **Final Model:**
-- **XGBoost** selected due to higher recall, better confusion matrix performance, and strong accuracy
+- **XGBoost** selected since XG BOOST offers the best predictive capabilities with an accuracy of 95% predicting 271 true negatives 6 false positives which is a false alarm but medically less dangerous than getting a false negative, 14 false negatives and 139 true posistives.¶
 
 ---
 
@@ -63,7 +69,16 @@ The dataset consists of structured clinical and demographic information collecte
 - Recall
 - Confusion Matrix
 - Classification Report
-
+  
+  MODEL             ACCURACY     RECALL(0)     RECALL(1)     CONFUSION MATRIX
+ RANDOM FOREST        94.42%        0.97          0.89          [270,  8]
+                                                                [16 ,136]
+ XG BOOST             95.35%        0.98          0.91          [271,  6]
+                                                                [14 ,139]
+ LOGISTIC REGRESSION  83.02%        0.89          0.73          [246, 31]
+                                                                [42 ,111]
+ SVM                  83.26%        0.90          0.71          [250, 27]
+                                                                [45 ,108]
 ---
 
 ### 6️⃣ Challenges & Limitations
