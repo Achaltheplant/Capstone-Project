@@ -1,3 +1,4 @@
 # Capstone-Project
 
 Dataset Link: https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset
+## PHASE 1: BUSINESS AND DATA UNDERSTANDING
