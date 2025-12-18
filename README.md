@@ -70,15 +70,15 @@ Heatmap reveals that the features do not have any strong correlations among them
 - Confusion Matrix
 - Classification Report
   
-  MODEL             ACCURACY     RECALL(0)     RECALL(1)     CONFUSION MATRIX
- RANDOM FOREST        94.42%        0.97          0.89          [270,  8]
-                                                                [16 ,136]
- XG BOOST             95.35%        0.98          0.91          [271,  6]
-                                                                [14 ,139]
- LOGISTIC REGRESSION  83.02%        0.89          0.73          [246, 31]
-                                                                [42 ,111]
- SVM                  83.26%        0.90          0.71          [250, 27]
-                                                                [45 ,108]
+  MODEL             | ACCURACY   |  RECALL(0)  |   RECALL(1)  |   CONFUSION MATRIX
+ RANDOM FOREST      |  94.42%    |    0.97     |     0.89     |     [270,  8]
+                    |            |             |              |     [16 ,136]
+ XG BOOST           |  95.35%    |    0.98     |     0.91     |     [271,  6]
+                    |            |             |              |     [14 ,139]
+ LOGISTIC REGRESSION|  83.02%    |    0.89     |     0.73     |     [246, 31]
+                    |            |             |              |     [42 ,111]
+ SVM                |  83.26%    |    0.90     |     0.71     |     [250, 27]
+                    |            |             |              |     [45 ,108]
 ---
 
 ### 6️⃣ Challenges & Limitations
