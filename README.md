@@ -86,8 +86,18 @@ Heatmap reveals that the features do not have any strong correlations among them
 - Class imbalance
 - Limited explainability
 - Need for real-world clinical validation
+- Need for clinical validation on real-world hospital data
+- Potential demographic bias across age and gender groups
+- Improved model explainability for clinicians
+- Regular retraining with new patient data
+  
+---
+
+### Conclusion
+
+This project demonstrates how machine learning, guided by the CRISP-DM framework, can support early Alzheimer’s disease screening. The selected XGBoost model shows strong predictive performance while emphasizing clinically important metrics such as recall. Future improvements will focus on explainability, fairness, and real-world deployment readiness.
 
 ---
 
-## ⚠️ Disclaimer
+### ⚠️ Disclaimer
 This project is for educational purposes only and is not a medical diagnostic tool.
