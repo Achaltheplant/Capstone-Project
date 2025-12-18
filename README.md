@@ -21,7 +21,7 @@ Traditional Alzheimer’s diagnosis methods are expensive, time-consuming, and r
 - Reduce diagnostic delays and healthcare costs
 - Support clinicians with data-driven insights
 
-The solution proposed is to utilise an interactive test which is cost-effective screening compared to imaging tests and if a positive is found, the patient can be forwarded to specialists which in turn, is a scalable solution for hospitals and telemedicine platforms
+  The solution proposed is to utilise an interactive test which is cost-effective screening compared to imaging tests and if a positive is found, the patient can be forwarded to specialists which in turn, is a scalable solution for hospitals and telemedicine platforms
 ---
 
 ### 2️⃣ Data Understanding and Preparation
